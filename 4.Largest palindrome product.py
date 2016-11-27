@@ -1,21 +1,16 @@
 
-
 def solution():
     result = 0
     num1 = 999
     num2 = 999
 
-    while num1 > 0 and num2 > 0:
+    while num1 > 1 and num2 > 500:
         if isPalindrome(num1 * num2):
-            result = num2 * num1
-            print num1
-            print num2
-            break
-        if num1 == num2:
-            num1 -= 1
-        else:
+            if num2 * num1 > result:
+                result = num2 * num1
             num2 -= 1
-
+            num1 = 999
+        num1 -= 1
 
     print result
 
