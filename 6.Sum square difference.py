@@ -1,14 +1,11 @@
 
 
 def main():
-    sumOfSquare = 100*(1+100)/2
+    limit = 100
+    sumOfSquare = limit*(1+limit)/2
     sumOfSquare = sumOfSquare * sumOfSquare
-    result = 0
-
-    for x in xrange(1,101):
-        result += x * x
-
-    print sumOfSquare - result
+    result = sumOfSquare - (2*limit +1) * limit*(1+limit)/6
+    print result
 
 
 if __name__ == '__main__':
